@@ -1,20 +1,154 @@
 {
-    "geode": "5.7.0",
-    "gd": {
-        "win": "2.2081",
-        "mac": "2.2081",
-        "android": "2.2081",
-        "ios": "2.2081"
-    },
-    "version": "1.0.0",
-    "id": "MalikHw.LayoutModeForEditor",
-    "name": "LayoutModeForEditor",
-    "developer": "MalikHw",
-    "description": "desc.",
-    "tags": ["yes", "yeah"],
-    "links": {
-        "source": "https://github.com/MalikHw/LayoutModeForEditor",
-        "community": "https://discord.gg/G9bZ92eg2n"
-    },
-    "settings": {}
+	"geode": "5.7.1",
+	"gd": {
+		"win": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081",
+		"android": "2.2081"
+	},
+	"id": "raydeeux.layoutmodeforeditor",
+	"name": "LayoutModeForEditor",
+	"version": "v1.0.1",
+	"developers": ["RayDeeUx", "MalikHw47"],
+	"description": "Turn any level into a layout.",
+	"settings": {
+		"enabled": {
+			"name": "Enabled",
+			"type": "bool",
+			"default": true
+		},
+		"deletion-filters-header": {
+			"name": "Deletion Filters",
+			"type": "title"
+		},
+		"shaders": {
+			"name": "Delete All Shader Triggers",
+			"type": "bool",
+			"default": true
+		},
+		"cameras": {
+			"name": "Delete All Camera Triggers",
+			"type": "bool",
+			"default": false
+		},
+		"shakes": {
+			"name": "Delete All Shake Triggers",
+			"type": "bool",
+			"default": true
+		},
+		"decoration": {
+			"name": "Decoration Deletion Mode (READ!)",
+			"type": "string",
+			"description": "- <cg>Selective</c>: Only deletes decoration objects if its assigned groups are only affected by <cl>Alpha</c> or <cs>Pulse</c> triggers, ***__OR__*** if it has no groups assigned at all.\n- <cy>Hide All Instead</c>: Hides all decoration objects instead, regardless of their group ID assignments.\n- <cr>Aggressive</c>: Deletes all decoration objects regardless of their group ID assignments.",
+			"default": "Selective",
+			"one-of": [
+				"Selective",
+				"Hide All Instead",
+				"Aggressive"
+			]
+		},
+		"object-hiding-header": {
+			"name": "Object Property Overrides",
+			"type": "title"
+		},
+		"hideCollectibleOverride": {
+			"name": "Override Hide For Collectible Objects",
+			"type": "bool",
+			"default": false
+		},
+		"hideCollectible": {
+			"name": "Hide All Collectible Objects",
+			"type": "bool",
+			"default": true,
+			"enable-if": "hideCollectibleOverride"
+		},
+		"hideCollisionObjectOverride": {
+			"name": "Override Hide For Collision Objects",
+			"type": "bool",
+			"default": false
+		},
+		"hideCollisionObject": {
+			"name": "Hide All Collision Objects",
+			"type": "bool",
+			"default": true,
+			"enable-if": "hideCollisionObjectOverride"
+		},
+		"override-header": {
+			"name": "Object Property Overrides",
+			"type": "title"
+		},
+		"hasNoGlowOverride": {
+			"name": "Override No Glow",
+			"type": "bool",
+			"default": true
+		},
+		"hasNoGlow": {
+			"name": "No Glow",
+			"type": "bool",
+			"default": true,
+			"enable-if": "hasNoGlowOverride"
+		},
+		"isDontFadeOverride": {
+			"name": "Override Don't Fade",
+			"type": "bool",
+			"default": true
+		},
+		"isDontFade": {
+			"name": "Don't Fade",
+			"type": "bool",
+			"default": true,
+			"enable-if": "isDontFadeOverride"
+		},
+		"isDontEnterOverride": {
+			"name": "Override Don't Enter",
+			"type": "bool",
+			"default": true
+		},
+		"isDontEnter": {
+			"name": "Don't Enter",
+			"type": "bool",
+			"default": true,
+			"enable-if": "isDontEnterOverride"
+		},
+		"hasNoParticlesOverride": {
+			"name": "Override No Particles",
+			"type": "bool",
+			"default": true
+		},
+		"hasNoParticles": {
+			"name": "No Particles",
+			"type": "bool",
+			"default": true,
+			"enable-if": "hasNoParticlesOverride"
+		},
+		"hasNoAudioScaleOverride": {
+			"type": "bool",
+			"default": true
+		},
+		"hasNoAudioScale": {
+			"name": "Force No Audio Scale",
+			"type": "bool",
+			"default": true,
+			"enable-if": "hasNoAudioScaleOverride"
+		},
+		"hasNoEffectsOverride": {
+			"name": "Override No Effects For Gameplay Objects Based On Visibility",
+			"type": "bool",
+			"default": true
+		},
+		"misc-header": {
+			"name": "Misc",
+			"type": "title"
+		},
+		"resetAllColorChannels": {
+			"name": "Reset All Color Channels",
+			"type": "bool",
+			"default": true
+		},
+		"resetAllSpecialColorChannels": {
+			"name": "Reset All Special Color Channels",
+			"type": "bool",
+			"default": true
+		}
+	}
 }
